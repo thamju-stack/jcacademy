@@ -1,0 +1,166 @@
+orginial two column section with contact details left and form in the rigth side
+
+{/* Contact Information & Form */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-8 font-montserrat">Contact Information</h2>
+
+              <div className="space-y-6">
+                <Card className="hover-lift border-border">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start space-x-4">
+                      <Phone className="h-6 w-6 text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-2">Phone Numbers</h3>
+                        <p className="text-muted-foreground">Main Office: +91 98765 43210</p>
+                        <p className="text-muted-foreground">Admissions: +91 98765 43211</p>
+                        <p className="text-muted-foreground">Student Support: +91 98765 43212</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover-lift border-border">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start space-x-4">
+                      <Mail className="h-6 w-6 text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-2">Email Addresses</h3>
+                        <p className="text-muted-foreground">General: info@jcacademy.com</p>
+                        <p className="text-muted-foreground">Admissions: admissions@jcacademy.com</p>
+                        <p className="text-muted-foreground">Support: support@jcacademy.com</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover-lift border-border">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start space-x-4">
+                      <MapPin className="h-6 w-6 text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-2">Address</h3>
+                        <p className="text-muted-foreground">
+                          JC Academy
+                          <br />
+                          123 Education Street
+                          <br />
+                          Academic City, State 560001
+                          <br />
+                          India
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover-lift border-border">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start space-x-4">
+                      <Clock className="h-6 w-6 text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-2">Office Hours</h3>
+                        <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 7:00 PM</p>
+                        <p className="text-muted-foreground">Saturday: 9:00 AM - 5:00 PM</p>
+                        <p className="text-muted-foreground">Sunday: 10:00 AM - 4:00 PM</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Social Media */}
+              <div className="mt-8">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Follow Us</h3>
+                <div className="flex space-x-4">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="border-primary text-primary hover:bg-primary/5 bg-transparent"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="border-primary text-primary hover:bg-primary/5 bg-transparent"
+                  >
+                    <Twitter className="h-5 w-5" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="border-primary text-primary hover:bg-primary/5 bg-transparent"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="border-primary text-primary hover:bg-primary/5 bg-transparent"
+                  >
+                    <Youtube className="h-5 w-5" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form 
+            <div>
+              <Card className="hover-lift border-border">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-primary">Send us a Message</CardTitle>
+                  <CardDescription>Fill out the form below and we'll get back to you within 24 hours.</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-2 block">First Name *</label>
+                      <Input placeholder="Enter your first name" className="border-border" />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-2 block">Last Name *</label>
+                      <Input placeholder="Enter your last name" className="border-border" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">Email Address *</label>
+                    <Input type="email" placeholder="Enter your email" className="border-border" />
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">Phone Number *</label>
+                    <Input type="tel" placeholder="Enter your phone number" className="border-border" />
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">Subject *</label>
+                    <Input placeholder="What is this regarding?" className="border-border" />
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">Message *</label>
+                    <Textarea
+                      placeholder="Tell us more about your inquiry..."
+                      className="min-h-[120px] border-border"
+                    />
+                  </div>
+
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    Send Message
+                  </Button>
+
+                  <p className="text-sm text-muted-foreground text-center">
+                    * Required fields. We respect your privacy and will never share your information.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+            */}
+          </div>
+        </div>
+      </section>
